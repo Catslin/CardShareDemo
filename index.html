@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Three Column Layout</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        margin-top: 10px;
+        background-image: url("http://i0.hdslb.com/bfs/article/4f3bede6f99fa1a7de87bfad758e562bc6adfbdb.jpg");
+      }
+      .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-img-top {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+      }
+
+      .selfImage {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+
+      .selfImage:hover {
+        background-color: #0069d9;
+        border-color: #0069d9;
+      }
+      .imageBox {
+        width: 80px;
+        height: 80px;
+      }
+      .selfImage {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- selfPage -->
+        <div class="col-md-3 bg-white h-100">
+          <div class="card">
+            <div class="d-flex align-items-center">
+              <div class="imageBox">
+                <img
+                  src="./hand.jpeg"
+                  class="selfImage"
+                  alt="..."
+                />
+              </div>
+              <div class="ml-3">
+                <h5 class="card-title">John Doe</h5>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+
+        </div>
+
+        <div class="col-md-6 bg-warning bg-white h-100">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+
+
+        <div class="col-md-3 bg-primary h-100">4</div>
+      </div>
+    </div>
+  </body>
+</html>
