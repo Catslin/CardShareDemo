@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  color: black;
+}
+
+.btn {
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  color: rgb(0, 255, 106);
+}
+
+.playing {
+  text-align: center;
+}

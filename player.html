@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.music-info img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.music-details {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.music-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.music-artist {
+  font-size: 16px;
+  color: #999;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.btn-play:hover {
+  transform: scale(1.2);
+}
+
+.btn-pause:hover {
+  transform: scale(1.2);
+}
+    </style>
+</head>
+<body>
+    <div class="music-player">
+        <div class="music-info">
+          <img src="./music.jpg" alt="music cover">
+          <div class="music-details">
+            <h3 class="music-title">Music Title</h3>
+            <p class="music-artist">Artist Name</p>
+          </div>
+        </div>
+        <audio src="./music.mp3"></audio>
+        <div class="music-controls">
+          <button class="btn btn-play" onclick="document.querySelector('audio').play()">
+            <i class="fa fa-play"></i>
+          </button>
+          <button class="btn btn-pause" onclick="document.querySelector('audio').pause()">
+            <i class="fa fa-pause"></i>
+          </button>
+        </div>
+      </div>
+</body>
+</html>
