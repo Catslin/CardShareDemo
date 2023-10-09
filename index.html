@@ -16,6 +16,7 @@
         margin-top: 10px;
         background-image: url("http://i0.hdslb.com/bfs/article/4f3bede6f99fa1a7de87bfad758e562bc6adfbdb.jpg");
       }
+
       .card {
         margin-top: 10px;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -46,53 +47,86 @@
 
       .card-text {
         font-size: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
 
       .imageBox {
         width: 80px;
         height: 80px;
       }
+
       .selfImage {
         width: 100%;
         height: 100%;
         border-radius: 50%;
       }
+      /*  */
+      .card-content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10px;
+      }
+      .card-title-container {
+        margin: 0;
+      }
+      .share-container {
+        position: relative;
+        margin-top: -50px;
+      }
+      .card-button:hover {
+        border: black 5px;
+        background-color: aliceblue;
+      }
     </style>
   </head>
+
   <body>
     <div class="container">
       <div class="row">
         <!-- selfPage -->
-        <div class="col-md-3 bg-white h-100 boxl sticky-top">
-            <!--  -->
-          <div class="card">
+
+        <div class="col-md-3 h-100 boxl sticky-top">
+          <!-- Profile card -->
+          <div class="card mb-4">
             <div class="d-flex align-items-center">
               <div class="imageBox">
-                <img src="./hand.jpeg" class="selfImage" alt="..." />
+                <img src="./img1.png" class="selfImage" alt="Profile picture" />
               </div>
               <div class="ml-3">
-                <h5 class="card-title">John Doe</h5>
-                <!-- <div class="music-player">
-                  <button class="btn previous">
-                    <i class="ph-bold ph-skip-back"></i>
-                  </button>
-                  <button class="btn play-pause">
-                    <i id="play-pause-icon" class="ph-bold ph-play"></i>
-                  </button>
-                  <button class="btn next">
-                    <i class="ph-bold ph-skip-forward"></i>
-                  </button>
-                </div> -->
+                <h5 class="card-title mb-0">Shima Rin</h5>
+                <p class="card-text text-muted">Web developer</p>
               </div>
             </div>
           </div>
-          <!--  -->
 
+          <!-- Chat page link card -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <a href="#" class="card-link">Go to Chat page</a>
+            </div>
+          </div>
+
+          <!-- WhatsApp chat reader link card -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <a href="#" class="card-link">Go to WhatsChat reader</a>
+            </div>
+          </div>
+
+          <!-- Video player link card -->
+          <div class="card">
+            <div class="card-body">
+              <a href="#" class="card-link">Go to Video player</a>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-6 bg-warning bg-white h-100 ">
-            
-            <!-- <div class="card">
+        <div class="col-md-7 bg-warning bg-white h-100">
+          <!-- <div class="card">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#">Navbar</a>
                     <button
@@ -127,37 +161,73 @@
                   </nav>
             </div> -->
 
-            <div class="card">
-                <div class="card-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video class="embed-responsive-item" src="{视频地址}" controls></video>
-                      </div>
-                  <h5 class="card-title">{视频标题}</h5>
-                  <p class="card-text">{视频描述}</p>
-                  <p class="card-text"><small class="text-muted">适配：{适配内容}</small></p>
+          <div class="card">
+            <div class="card-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <!--  BILIBILI 地址PC端参数
+                    &high_quality=1   (1=最高画质 0=最低画质)
+                    &danmaku=0   (1=打开弹幕 0=关闭弹幕)
+                    iframe 参数
+                    allowfullscreen="allowfullscreen" #移动端全屏
+                    sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts" #禁止弹出网页 -->
+                <iframe
+                  src="//player.bilibili.com/player.html?aid=930154388&bvid=BV1aK4y1o7LR&cid=327477708&p=1"
+                  allowfullscreen="allowfullscreen"
+                  width="100%"
+                  height="500"
+                  scrolling="no"
+                  frameborder="0"
+                  sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+                ></iframe>
+              </div>
+              <div class="card-content-container">
+                <div class="card-title-container">
+                  <h6 class="card-title">
+                    奥本海默谈原子弹：我成了世界的毁灭者
+                  </h6>
+                  <p class="card-text">
+                    “我们知道世界将会大不相同，有人大笑，有人哭泣，更多人沉默不语。我想起《薄迦梵歌》里的一句‘我现在成了死神，世界的毁灭者’，我们大概都用不同的方式思考过这个问题吧。”
+                  </p>
+                </div>
+                <div class="share-container">
+                  <div class="card-button">
+                    <i class="fas fa-share">SHARE</i>
+                  </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">{视频标题}</h5>
-                  <p class="card-text">{视频描述}</p>
-                  <p class="card-text"><small class="text-muted">适配：{适配内容}</small></p>
-                </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{视频标题}</h5>
+              <p class="card-text">{视频描述}</p>
+              <p class="card-text">
+                <small class="text-muted">适配：{适配内容}</small>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <video
+                  class="embed-responsive-item"
+                  src="{视频地址}"
+                  controls
+                ></video>
               </div>
-              <div class="card">
-                <div class="card-body">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video class="embed-responsive-item" src="{视频地址}" controls></video>
-                      </div>
-                  <h5 class="card-title">{视频标题}</h5>
-                  <p class="card-text">{视频描述}</p>
-                  <p class="card-text"><small class="text-muted">适配：{适配内容}</small></p>
-                </div>
-              </div>
-
+              <h5 class="card-title">{视频标题}</h5>
+              <p class="card-text">{视频描述}</p>
+              <p class="card-text">
+                <small class="text-muted">适配：{适配内容}</small>
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-3 bg-primary h-100 sticky-top d-none d-lg-block">4</div>
+        <div class="col-md-2 bg-primary h-100 sticky-top d-none d-lg-block">
+          4
+        </div>
       </div>
     </div>
   </body>
