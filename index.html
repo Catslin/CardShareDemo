@@ -10,11 +10,12 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
         margin-top: 10px;
-        background-image: url("http://i0.hdslb.com/bfs/article/4f3bede6f99fa1a7de87bfad758e562bc6adfbdb.jpg");
       }
 
       .card {
@@ -104,21 +105,21 @@
           </div>
 
           <!-- Chat page link card -->
-          <div class="card mb-4">
+          <div class="card mb-4 d-none d-lg-block">
             <div class="card-body">
               <a href="#" class="card-link">Go to Chat page</a>
             </div>
           </div>
 
           <!-- WhatsApp chat reader link card -->
-          <div class="card mb-4">
+          <div class="card mb-4 d-none d-lg-block">
             <div class="card-body">
               <a href="#" class="card-link">Go to WhatsChat reader</a>
             </div>
           </div>
 
           <!-- Video player link card -->
-          <div class="card">
+          <div class="card  d-none d-lg-block">
             <div class="card-body">
               <a href="#" class="card-link">Go to Video player</a>
             </div>
@@ -161,8 +162,8 @@
                   </nav>
             </div> -->
 
-          <div class="card">
-            <div class="card-body">
+          <div class="card" >
+            <div class="card-body" id="cardImage">
               <div class="embed-responsive embed-responsive-16by9">
                 <!--  BILIBILI 地址PC端参数
                     &high_quality=1   (1=最高画质 0=最低画质)
@@ -190,15 +191,16 @@
                   </p>
                 </div>
                 <div class="share-container">
+                  <a id="saveImg"></a>
                   <div class="card-button">
-                    <i class="fas fa-share">SHARE</i>
+                    <button class="fas fa-share" onclick="saveImage()" style="border: none;">SHARE</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!--  -->
-          <div class="card">
+          <!-- <div class="card">
             <div class="card-body">
               <h5 class="card-title">{视频标题}</h5>
               <p class="card-text">{视频描述}</p>
@@ -206,13 +208,12 @@
                 <small class="text-muted">适配：{适配内容}</small>
               </p>
             </div>
-          </div>
+          </div> -->
           <div class="card">
             <div class="card-body">
               <div class="embed-responsive embed-responsive-16by9">
                 <video
                   class="embed-responsive-item"
-                  src="{视频地址}"
                   controls
                 ></video>
               </div>
@@ -231,4 +232,5 @@
       </div>
     </div>
   </body>
+  <script src="./canvas.js"></script>
 </html>

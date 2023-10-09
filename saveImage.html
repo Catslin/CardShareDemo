@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="canvas">
+      <div class="card" >
+        <div class="card-body" id="cardImage">
+          <div class="embed-responsive embed-responsive-16by9">
+            <!--  BILIBILI 地址PC端参数
+                &high_quality=1   (1=最高画质 0=最低画质)
+                &danmaku=0   (1=打开弹幕 0=关闭弹幕)
+                iframe 参数
+                allowfullscreen="allowfullscreen" #移动端全屏
+                sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts" #禁止弹出网页 -->
+            <iframe
+              src="//player.bilibili.com/player.html?aid=930154388&bvid=BV1aK4y1o7LR&cid=327477708&p=1"
+              allowfullscreen="allowfullscreen"
+              width="100%"
+              height="500"
+              scrolling="no"
+              frameborder="0"
+              sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"
+            ></iframe>
+          </div>
+          <div class="card-content-container">
+            <div class="card-title-container">
+              <h6 class="card-title">
+                奥本海默谈原子弹：我成了世界的毁灭者
+              </h6>
+              <p class="card-text">
+                “我们知道世界将会大不相同，有人大笑，有人哭泣，更多人沉默不语。我想起《薄迦梵歌》里的一句‘我现在成了死神，世界的毁灭者’，我们大概都用不同的方式思考过这个问题吧。”
+              </p>
+            </div>
+            <div class="share-container">
+              <div class="card-button">
+                <button class="fas fa-share" onclick="saveImage()" style="border: none;">SHARE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a id="saveImg"></a>
+    <button onclick="saveImage()">点击保存将页面保存为图片并下载</button>
+  </body>
+<script src="./canvas.js"></script>
+</html>
